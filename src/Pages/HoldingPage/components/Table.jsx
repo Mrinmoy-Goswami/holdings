@@ -4,7 +4,7 @@ import { tableHeadings } from "../Constants/Tableheadings";
 const Table = ({ data }) => {
   const arr = tableHeadings.map((item) => item.toUpperCase());
   return (
-    <div className="w-full h-full border-2 border-gray-300 m-5 p-5 rounded flex flex-col items-start justify-start">
+    <div className="w-full h-full border-2 shadow-lg m-5 p-5 rounded flex flex-col items-start justify-start">
       <div className="w-full flex flex-row justify-start py-3">
         {arr.map((item) => (
           <div
@@ -21,7 +21,7 @@ const Table = ({ data }) => {
           } bg-white-200 flex flex-row justify-evenly`}
         >
           {
-            <div className="w-full flex justify-evenly text-xs py-3 rounded  mb-4  ">
+            <div className="w-full flex justify-evenly text-xs text-gray-500 font-bold py-3 rounded  mb-4  ">
               <div className="w-1/6  flex h-18 flex-row  justify-start ">
                 {item.name}
               </div>
