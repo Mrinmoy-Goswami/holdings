@@ -6,8 +6,8 @@ const Table = ({ data }) => {
   return (
     <div className="w-full h-full border-2 shadow-lg m-5 p-5 rounded flex flex-col items-start justify-start">
       <div className="w-full flex flex-row justify-start py-3">
-        {arr.map((item) => (
-          <div
+        {arr.map((item,index) => (
+          <div key={index}
             className={`font-semibold flex h-18   text-gray-600 w-1/6 mb-2 p-0 text-sm`}
           >
             {item}
@@ -15,7 +15,7 @@ const Table = ({ data }) => {
         ))}
       </div>
       {data.map((item, index) => (
-        <div
+        <div key={index}
           className={`w-full ${
             index % 2 == 0 ? "bg-blue-50" : ""
           } bg-white-200 flex flex-row justify-evenly`}
